@@ -20,8 +20,7 @@ const commonConfig = {
 
 module.exports = mode => {
   if (mode === "development") {
-    //return merge(commonConfig, clientConfig, {mode})
-    return merge(commonConfig, serverConfig, {mode})
+    return merge(commonConfig, clientConfig, {mode})
   }
 
   if (mode === "production") {

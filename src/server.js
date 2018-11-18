@@ -2,7 +2,9 @@
  * node src/server にて起動
  */
 const express = require("express")
-const renderer = require("vue-server-renderer").createRenderer()
+const renderer = require("vue-server-renderer").createRenderer({
+  template: require('fs').readFileSync('./config/template-server.html', 'utf-8')
+})
 // npm build で生成したmain.js をロード
 const {createApp} = require("../dist/main")
 
